@@ -14,6 +14,12 @@ ESP32深度睡眠實驗，
 ![image](https://user-images.githubusercontent.com/40359899/228641276-c19dd35b-074f-42d0-98ce-81ff690e424a.png)
 
 
+
+
+
+
+.
+
 1. Active正常模式
 就是我們一般的運作狀態，可以開啟藍芽及WiFi
 
