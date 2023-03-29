@@ -52,7 +52,9 @@ TIMER最為簡單，我們利用「esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP)�
 
 輕度睡眠定時喚醒並讀取DHT11傳送MQTT範例：02LightSleepDHT11MQTT.ino
 
-深度睡眠定時喚醒範例：03
+深度睡眠定時喚醒範例：03DeepSleep.ino
+
+深度睡眠定時喚醒並讀取DHT11傳送MQTT範例：04DeepSleepDHT11MQTT.ino
 
 
 2.EX0：RTC 單一腳位喚醒
@@ -68,7 +70,7 @@ esp_sleep_enable_ext0_wakeup(GPIO_NUM_2, HIGH);
 
 這裡設定33,32,2號腳可以喚醒，不過最後只有2號腳可以喚醒系統。若需要使用多腳位則要下面EX1的功能。
 
-深度睡眠單腳位喚醒範例：http://t.ly/zpQ_1
+深度睡眠單腳位喚醒範例：05DeepSleepWakeByPin.ino
 
 3.EX1：RTC 多腳位喚醒
 當使用者有需求喚醒腳位超過一隻時，就必須使用這個功能，由於很多腳位要用一個BITMASK變數來代替，因此必須了解如何計算BITMASK，這裡先假設ESP32只有10根腳(編號0~9)，而我們希望9,6,2能夠喚醒。
@@ -83,7 +85,7 @@ esp_sleep_enable_ext0_wakeup(GPIO_NUM_2, HIGH);
 
 進位轉16進位可以使用以下這個網站：https://www.convertworld.com/zh-hant/numerals/hexadecimal.html
 
-深度睡眠多腳位喚醒範例：https://t.ly/hbZH
+深度睡眠多腳位喚醒範例：06DeepSleepWakeByMultiPins.ino
 
 
 4.TOUCHPAD：RTC 觸控腳喚醒
@@ -91,7 +93,7 @@ ESP32內建10個觸控腳，可以感測人體靜電，當有人觸摸時，數�
 
 touchAttachInterrupt(T8, TouchCallback, Threshold);代表觸控腳T8被觸摸時，系統就會被喚醒。詳細操做語法請參考
 
-深度睡眠觸控喚醒範例：https://t.ly/k2bfl
+深度睡眠觸控喚醒範例：07DeepSleepWakeByTouch.ino
 
 
 5.ULP：協同CPU喚醒(本篇不實做)
