@@ -49,11 +49,11 @@ CPU：當輕度睡眠時，CPU為“暫停”，而深度睡眠時CPU則是完�
 1.TIMER：由RTC計時器喚醒
 TIMER最為簡單，我們利用「esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP)」就可以設定未來進入睡眠後，應該多久後喚醒，有點像是人類在睡覺前會定鬧鐘一樣，這裡的”TIME_TO_SLEEP”時間是以百萬之一秒，所以有時候我們會把時間x1000x1000，轉換成秒。
 
-輕度睡眠定時喚醒範例：https://t.ly/_a5U
+輕度睡眠定時喚醒範例：01LightSleep.ino
 
-輕度睡眠定時喚醒並讀取DHT11傳送MQTT範例：http://t.ly/xKVF
+輕度睡眠定時喚醒並讀取DHT11傳送MQTT範例：02LightSleepDHT11MQTT.ino
 
-深度睡眠定時喚醒範例：https://t.ly/PVe1
+深度睡眠定時喚醒範例：03
 
 
 2.EX0：RTC 單一腳位喚醒
